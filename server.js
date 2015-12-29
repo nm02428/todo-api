@@ -17,7 +17,7 @@ app.get('/', function(req, res) {
 // GET /todos?completed=false&q=work
 app.get('/todos', function(req, res) {
 	var query = req.query;
-	var where = {};
+	var where = {}; 
 
 	if (query.hasOwnProperty('completed') && query.completed === 'true') {
 		where.completed = true;
