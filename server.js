@@ -29,7 +29,7 @@ app.get('/todos', function(req, res) {
 		where.description = {
 			$like: '%' + query.q + '%'
 		};
-	}
+	} 
 
 	db.todo.findAll({where: where}).then(function (todos) {
 		res.json(todos);
